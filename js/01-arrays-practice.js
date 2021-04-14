@@ -125,60 +125,54 @@
 
 //STEP 14:Create a string array called employees using literal notation and populate the array with several employee names. Then, create an anonymous function called showEmployee. The function should accept a parameter. Call this function, passing in the employees array into the function as a parameter. Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in the console window:
 
-// let employees = [
-//     'Alice',
-//     'Ben',
-//     'Charlie',
-//     'Dean',
-//     'Eddie',
-//     'Frank'
-// ];
+let employees = [
+    'Alice',
+    'Ben',
+    'Charlie',
+    'Dean',
+    'Eddie',
+    'Frank'
+];
 
-//console.log(employees);
-// console.log(employees.toString().toUpperCase());
-// for(i=0;i<employees.length; i++){
-// let showEmployee = (employees) => {
-//     console.log(employees.toUpperCase());
-// };
-// }
-// showEmployee(employees);
-// const spec = (that) => {
-//     console.log(that.toUpperCase()`Employees:`)};
-//     spec(employees);
+console.log(`Employees:`);
+console.log('');
+ let showEmployee = employees.forEach(person => {
     
+    console.log(person.toUpperCase());
+    
+});
 
-// spec(employees);
-//console.log.showEmployee(nums);
+
 
 
 
 //STEP 15:Write a JavaScript function to filter false, null, 0 and blank values from an array.Test Data: console.log(filterValues([58, '', 'abcd', true, null, false, 0]));Expected Result: [58, "abcd", true]
-let filterValues =  (param) =>{
-       param.filter((item) =>{
-            return typeof item !== "boolean"
-        });
-       };
-       
-       console.log(filterValues([58, '', 'abcd', true, null, false, 0]));
-       
 
+// let test1 = [58, '', 'abcd', true, null, false, 0];
+// let filterValues =  (test1.filter((item) => { 
+//     return item !== null && item !== "" && item != 0 &&  item !== false; 
+// }))
+// console.log(filterValues);
 
 
 
 //STEP 16:Write a JavaScript function to get a random item from an array. So if I create a numeric array with 10 numbers and then pass that array into my function, the function should randomly return one of those numbers.
-let tips = ['', 10, 'goop', 'poop', 'hoop', 11, 'roop', 'loop', 56, 88, 33];
+
+// let samp = ['', 10, 'goop', 'poop', 'hoop', 11, 'roop', 'loop', 56, 88, 33];
 
 // const numRando = (exam) =>{
 //     let y = exam.length - 1
 //     let r = Math.floor((Math.random() * y) + 1);
 //     console.log(r);
 //     console.table(exam);
-//     console.log(exam[r]);
+//     console.log(`The random item is: `+exam[r]);
+//     console.log(`from index: ` +r);
 // }
-// numRando(tips);
+// numRando(samp);
 
 // STEP 17:Write a JavaScript function to get the largest number from a numeric array
-// let nums = [54, 876, 234, 10000, 1, 78, 5432, 999999, 3, 0, 1234567, 9876543, 12, 9, 100];
+
+// let nums = [-8, 54, 876, 234, 10000, 1, 78, 5432, 999999, 3, 0, 1234567, 9876543, 12, 9, 100];
 // let arrayDesc = nums.sort((a, b) => b - a);
 // console.log(arrayDesc);
-// console.log(arrayDesc[0]);
+// console.log( `The largest number is: `+ arrayDesc[0]);
